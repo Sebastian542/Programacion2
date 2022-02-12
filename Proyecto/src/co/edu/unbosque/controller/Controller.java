@@ -1,16 +1,17 @@
 package co.edu.unbosque.controller;
 
+import co.edu.unbosque.model.csv.Producto;
 import co.edu.unbosque.view.View;
 
 public class Controller {
 
-
+	private Producto c;
 	
 	private View gui;
 	
 	public Controller() {
 		
-		
+		c=new Producto();
 		gui = new View();
 	
 		funcionar();
@@ -19,6 +20,7 @@ public class Controller {
 	
 	public void funcionar() {
 		
+		c.toString();
 
 		
 	}
