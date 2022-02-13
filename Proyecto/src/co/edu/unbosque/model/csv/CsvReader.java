@@ -6,7 +6,7 @@ import java.io.FileReader; //Reads text from character files using a default buf
 
 public class CsvReader{
 	
-private static String LOCATION_OF_THE_FILE="C:\\Users\\SebastianM\\git\\Programacion2\\Proyecto\\Data\\data.csv";//file location
+private static String LOCATION_OF_THE_FILE="Data\\data.csv";//file location
 
 	public static void main(String[] args)
 	{
