@@ -1,4 +1,4 @@
-package co.edu.unbosque.model.csv;
+package co.edu.unbosque.csv;
 
 import java.util.ArrayList;
 import java.util.List;

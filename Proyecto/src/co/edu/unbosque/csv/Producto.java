@@ -1,4 +1,4 @@
-package co.edu.unbosque.model.csv;
+package co.edu.unbosque.csv;
 
 import com.opencsv.bean.CsvBindByName;
 
@@ -65,13 +65,13 @@ public class Producto {
 	
 	public String toString() {
 		
-		return " idFactura=" + idFactura + 
-			   ", idProducto=" + idProducto +
-			   ", descripcion=" + descripcion +
-			   ", cantidad=" + cantidad +
-			   ", precioUnitario=" + precioUnitario + 
-			   ", idCliente=" + idCliente + 
-			   ", pais=" + pais + "]";
+		return " idFactura =" + idFactura + 
+			   " idProducto =" + idProducto +
+			   " descripcion=" + descripcion +
+			   " cantidad=" + cantidad +
+			   " precioUnitario=" + precioUnitario + 
+			   " idCliente=" + idCliente + 
+			   " pais=" + pais ;
 	}
 	
 
