@@ -76,6 +76,13 @@ public class CsvReader{
         	
         
            System.out.println("Muestro cantidad de array"+a.getDatos());
+          
+           a.ventasMes();
+         
+  
+         System.out.println("----------------------");
+        
+         a.totalVentas();
            
            }
           catch(Exception e) //to catch any exception inside try block
