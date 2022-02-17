@@ -3,28 +3,31 @@ package co.edu.unbosque.model;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import co.edu.unbosque.view.View;
+
 public class AlmacenarDatos {
 
 
-	public ArrayList<String>datos;
+	private ArrayList<String>datos;
 	public ArrayList<String>totalMes;
+	private View gui;
+
 
 
 	public AlmacenarDatos() {
 
 		datos = new ArrayList<String>();
 		totalMes = new ArrayList<String>();
+		gui=new View();
+		
+		
 	}
 	
 
 	public void insertarNumero(String n ) {
 		
-		String[] separado= n.split("  ");
-		
-		//datos.add(new String (n));
-		
-		
-		
+		String[] separado= n.split("   ");
+
 		for(String almacena : separado){
 			
 		
@@ -32,41 +35,25 @@ public class AlmacenarDatos {
 			
 			datos.add(new String (almacena));
 		    
+		
+			
 		}
 		
 	
+	
+		System.out.println("Imprimiendo desde almacenar "+datos.size());
+		
 		
 	}
 
 	
-	public int mostrar() {
-		
-		return datos.size();
-	}
+	
+	
 
-	public ArrayList<String> getDatos() {
-		return datos;
-	}
-
-
-	public void setDatos(ArrayList<String> datos) {
-		this.datos = datos;
-	}
+	
 
 	public void ventasMes() {
 		
-	//String operacion=	datos.get(3)+datos.get(5);
-	
-	
-	  
-	   
-	   //int n1 = Integer.parseInt(datos.get(3)); 
-	  
-
-	  // int n2 = Integer.parseInt(datos.get(5)); 
-		
-	  //float n1 = Float.valueOf(datos.get(11));
-	 // float n2 = Float.valueOf(datos.get(13)); 
 	  
 	  int a = 11;
 	  int b=0;
@@ -95,24 +82,36 @@ public class AlmacenarDatos {
 			
 	  }
 
-		   
+		   System.out.println("Viendo tamaño arreglo desde ventas del mes "+datos.size());
 		    
 	  
 		
 	}
 	
-  public void totalVentas() {
-	  
-	 /* System.out.println(totalMes.size());
-		  
-	  for (int i=0;i<totalMes.size();i++) {
-	      
-	      System.out.println(totalMes.get(i));
-	      
-	    
-	    } */
+	
+	
+	public void buscarFactura( ) {
+		
+		String busqueda=gui.pedirDato();
+		
+		int posicion = datos.indexOf(busqueda);
 
-	  	double suma=0;
+		if (posicion >= 0) {
+		
+		  System.out.println("La factura de id : " + busqueda +"\n"+"Tiene la descripcion de producto :"+datos.get(posicion+2));
+
+		}else {
+		
+		  System.out.println("El elemento " + busqueda + " NO está en la lista");
+	
+		}
+	
+	}
+	
+  public void totalVentas() {
+
+	  double suma=0;
+	  
 	  for(int i=0;i<totalMes.size();i++){ 
 		    Float valor =null;
 		   
@@ -127,16 +126,23 @@ public class AlmacenarDatos {
 	  
 
 
-public ArrayList<String> getTotalMes() {
-	return totalMes;
-}
-
-
-public void setTotalMes(ArrayList<String> totalMes) {
-	this.totalMes = totalMes;
-}
-	
-
+	public ArrayList<String> getTotalMes() {
+		return totalMes;
+	}
 	
 	
+	public void setTotalMes(ArrayList<String> totalMes) {
+		this.totalMes = totalMes;
+	}
+
+	public ArrayList<String> getDatos() {
+		return datos;
+	}
+
+
+	public void setDatos(ArrayList<String> datos) {
+		this.datos = datos;
+	}
+
+
 }

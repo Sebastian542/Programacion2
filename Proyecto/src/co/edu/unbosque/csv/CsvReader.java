@@ -15,6 +15,8 @@ public class CsvReader{
 	
 	
 	
+	
+	
 		public CsvReader() {
 				
 			a=new AlmacenarDatos();
@@ -25,7 +27,7 @@ public class CsvReader{
 		
 		
 		
-	private static String LOCATION_OF_THE_FILE="C:\\Users\\SebastianM\\Desktop\\data.csv";//file location
+	private static String LOCATION_OF_THE_FILE="Data/data.csv";//file location
 
 	
 	
@@ -60,7 +62,9 @@ public class CsvReader{
         	
         
               
-			for(String an: nextRecord)
+		
+        	
+        	for(String an: nextRecord)
 				
             	
             	  //n=an; 
@@ -75,14 +79,15 @@ public class CsvReader{
            }
         	
         
-           System.out.println("Muestro cantidad de array"+a.getDatos());
+          // System.out.println("Muestro cantidad de array"+a.getDatos());
           
            a.ventasMes();
-         
-  
-         System.out.println("----------------------");
+
         
          a.totalVentas();
+         
+        
+         a.buscarFactura();
            
            }
           catch(Exception e) //to catch any exception inside try block
@@ -92,7 +97,6 @@ public class CsvReader{
 
 }
 
-    
     
     
 }
