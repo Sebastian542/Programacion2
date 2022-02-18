@@ -26,22 +26,18 @@ public class AlmacenarDatos {
 
 	public void insertarNumero(String n ) {
 		
-		String[] separado= n.split("   ");
+		String[] separado= n.split("            ");
 
 		for(String almacena : separado){
 			
-		
 			System.out.println("Los elementos almacenados de forma separada son : "+almacena);
-			
 			datos.add(new String (almacena));
-		    
-		
-			
+
 		}
 		
 	
 	
-		System.out.println("Imprimiendo desde almacenar "+datos.size());
+		System.out.println("Posicion del arreglo "+datos.size());
 		
 		
 	}
@@ -57,16 +53,18 @@ public class AlmacenarDatos {
 	  
 	  int a = 11;
 	  int b=0;
-	  float operacion1 = 0;
-	  float operacion2 = 0;
-	  for (int n = 0 ;n<4;a++) {
+	  Float operacion1 ;
+	  
+	  
+
+	  for (int n = 0 ;n<541909;a++) {
 		  
 		  	
 		  	b=a+2;
 
-			float n1 = Float.valueOf(datos.get(a));
+			Float n1 = Math.abs(Float.valueOf(datos.get(a)));
 			
-			float n2 = Float.valueOf(datos.get(b));
+			Float n2 = Math.abs(Float.valueOf(datos.get(b)));
 			
 			 operacion1=n1*n2;
 			 String op2 = Float.toString(operacion1);
@@ -74,18 +72,13 @@ public class AlmacenarDatos {
 			
 			a=a+7;
 			n++;
-			System.out.println("operare los siguientes valores"+n1+"  *  "+n2+"  =  "+operacion1);
 			
-			//String op2 = Float.toString(operacion1);
-			//totalMes.add(op2);
 			
+			System.out.println("operare los siguientes valores  "+n1+"  *  "+n2+"  =  "+operacion1);
 			
 	  }
 
-		   System.out.println("Viendo tamaño arreglo desde ventas del mes "+datos.size());
-		    
-	  
-		
+
 	}
 	
 	
@@ -110,7 +103,7 @@ public class AlmacenarDatos {
 	
   public void totalVentas() {
 
-	  double suma=0;
+	  float suma=0;
 	  
 	  for(int i=0;i<totalMes.size();i++){ 
 		    Float valor =null;

@@ -84,10 +84,8 @@ public class CsvReader{
            a.ventasMes();
 
         
-         a.totalVentas();
-         
-        
-         a.buscarFactura();
+           a.totalVentas();
+           a.buscarFactura();
            
            }
           catch(Exception e) //to catch any exception inside try block
