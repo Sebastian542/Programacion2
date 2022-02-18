@@ -83,25 +83,26 @@ public class AlmacenarDatos {
 	
 	
 	
-	public void buscarFactura( ) {
+	public String buscarFactura( ) {
 		
 		String busqueda=gui.pedirDato();
+		String res = null;
 		
 		int posicion = datos.indexOf(busqueda);
 
 		if (posicion >= 0) {
 		
 		  System.out.println("La factura de id : " + busqueda +"\n"+"Tiene la descripcion de producto :"+datos.get(posicion+2));
-
+		  return res = res +datos.get(posicion+2);
 		}else {
 		
 		  System.out.println("El elemento " + busqueda + " NO está en la lista");
-	
+		  return res = res + "El elemento " + busqueda + " NO está en la lista";
 		}
 	
 	}
 	
-  public void totalVentas() {
+  public double totalVentas() {
 
 	  float suma=0;
 	  
@@ -114,7 +115,7 @@ public class AlmacenarDatos {
 		
 	  }
 	  System.out.println("El valor total de ventas es  : "+suma);
-	  
+	  return suma;
 	  }
 	  
 

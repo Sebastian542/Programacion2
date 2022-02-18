@@ -25,7 +25,37 @@ public class Controller {
 	
 	public void funcionar() {
 		
-		
+//		int opcion = 0;
+//		
+//		opcion = gui.leerDatoEntero("Seleccione una opcion"+
+//									"\n1.Cargar el Archivo"+
+//									"\n2.Total de Ventas"+
+//									"\n3.Solicitar detalle de factura"+
+//									"\n4.Cantidad de unidades vendidas"+
+//									"\n5.Promedio de ventas mensuales"+
+//									"\n6.Descripciones");
+//		
+//		switch (opcion) {
+//		case 1: {
+//			
+//			}
+//		case 2: {
+//			
+//			}
+//		case 3: {
+//			
+//			}
+//		case 4: {
+//			
+//			}
+//		case 5: {
+//			
+//			}
+//		case 6: {
+//			
+//			}	
+//		}
+//		
 	
 		
 		lectura.main(null);
